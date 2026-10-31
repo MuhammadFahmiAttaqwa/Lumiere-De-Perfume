@@ -28,7 +28,9 @@ export function Navbar() {
     const activeSectionId = useActiveSection(SECTION_ORDER);
 
     const navigation = useMemo(() => sortByOrder(settings?.navigation ?? []), [settings?.navigation]);
-    const sectionItems = navigation.filter((item) => getAnchorId(item.url) === activeSectionId);
+    const sectionItems = activeSectionId
+        ? navigation.filter((item) => getAnchorId(item.url) === activeSectionId)
+        : [];
     const activeItem = sectionItems.find((item) => !item.url.includes(QUERY_SEPARATOR)) ?? sectionItems[0];
     const menuLabel = activeItem?.label ?? UI_TEXT.common.home;
 

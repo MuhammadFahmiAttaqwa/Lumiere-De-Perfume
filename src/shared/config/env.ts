@@ -2,8 +2,10 @@ import * as z from 'zod/mini';
 
 const CURRENCY_CODE_LENGTH = 3;
 const MIN_LOCALE_LENGTH = 2;
+const PATH_SEPARATOR = '/';
 
 const envSchema = z.object({
+    BASE_URL: z.string().check(z.startsWith(PATH_SEPARATOR)),
     VITE_API_BASE_URL: z.string().check(z.trim(), z.minLength(1)),
     VITE_ENABLE_MOCK: z.pipe(
         z.enum(['true', 'false']),
@@ -21,7 +23,13 @@ if (!parsedEnv.success) {
     throw new Error(`Invalid environment configuration: ${invalidKeys}`);
 }
 
+const basePath = parsedEnv.data.BASE_URL.endsWith(PATH_SEPARATOR)
+    ? parsedEnv.data.BASE_URL
+    : `${parsedEnv.data.BASE_URL}${PATH_SEPARATOR}`;
+
 export const ENV = {
+    basePath,
+    routerBasename: basePath.length > 1 ? basePath.slice(0, -1) : PATH_SEPARATOR,
     apiBaseUrl: parsedEnv.data.VITE_API_BASE_URL,
     enableMock: parsedEnv.data.VITE_ENABLE_MOCK,
     apiTimeoutMs: parsedEnv.data.VITE_API_TIMEOUT_MS,

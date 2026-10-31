@@ -1,4 +1,5 @@
 import type { HomeContent } from '@/features/home';
+import { publicAssetUrl } from '@/shared/lib/publicAssetUrl';
 
 export const HOME_CONTENT_DATA: HomeContent = {
     heroSlides: [
@@ -7,11 +8,11 @@ export const HOME_CONTENT_DATA: HomeContent = {
             title: 'Timeless Glow',
             tagline: 'Your skin, our science',
             // backgroundUrl: '/images/hero-1.svg',
-            backgroundUrl: '/images/hero/hero-flower.webp',
+            backgroundUrl: publicAssetUrl('images/hero/hero-flower.webp'),
             featuredProduct: {
                 name: 'Relax & Recharge Sleep Face Elixir',
                 // imageUrl: '/images/hero-product-1.svg',
-                imageUrl: '/images/hero/relax-recharge-elixir.webp',
+                imageUrl: publicAssetUrl('images/hero/relax-recharge-elixir.webp'),
                 ctaLabel: 'Shop Collection',
                 ctaUrl: '/?category=serum-treatment#catalog',
             },
@@ -22,12 +23,12 @@ export const HOME_CONTENT_DATA: HomeContent = {
             title: 'Pure Radiance',
             tagline: 'Your skin, our science',
             // backgroundUrl: '/images/hero-2.svg',
-            backgroundUrl: '/images/hero/hero-lavender-branch.webp',
+            backgroundUrl: publicAssetUrl('images/hero/hero-lavender-branch.webp'),
             featuredProduct: {
                 // name: 'Hydra Veil Moisture Cream',
                 // imageUrl: '/images/hero-product-2.svg',
                 name: 'Exfoliate & Energise Mask',
-                imageUrl: '/images/standards/standards-tube.webp',
+                imageUrl: publicAssetUrl('images/standards/standards-tube.webp'),
                 ctaLabel: 'Shop Collection',
                 // ctaUrl: '/?category=moisturisers#catalog',
                 ctaUrl: '/?category=mask#catalog',
@@ -84,9 +85,9 @@ export const HOME_CONTENT_DATA: HomeContent = {
         description:
             'Since the very beginning, we have always considered nature to be an important part of how we do things and have built our reputation upon offering people safe, reliable products that respect our environment.',
         // imageUrl: '/images/standards.svg',
-        imageUrl: '/images/standards/standards-leaves.webp',
+        imageUrl: publicAssetUrl('images/standards/standards-leaves.webp'),
         // featuredImageUrl: '/images/standards-product.svg',
-        featuredImageUrl: '/images/standards/standards-tube.webp',
+        featuredImageUrl: publicAssetUrl('images/standards/standards-tube.webp'),
         ctaLabel: 'Learn more about us',
         ctaUrl: '/?page=about-us',
         displayText: 'Lumière de Peau',
@@ -105,7 +106,7 @@ export const HOME_CONTENT_DATA: HomeContent = {
                 description: 'Botanical actives sourced responsibly and blended for visible, gentle results.',
                 iconKey: null,
                 // imageUrl: '/images/standards-leaf.svg',
-                imageUrl: '/images/standards/standards-leaves.webp',
+                imageUrl: publicAssetUrl('images/standards/standards-leaves.webp'),
                 sortOrder: 2,
             },
             {
@@ -131,10 +132,10 @@ export const HOME_CONTENT_DATA: HomeContent = {
         description:
             'Say hello to our legendary products — iconic essentials you trust and reach for again and again. Discover the time-tested favourites our customers love most.',
         // backgroundUrl: '/images/icons-bg.svg',
-        backgroundUrl: '/images/hero/hero-lavender-branch.webp',
+        backgroundUrl: publicAssetUrl('images/hero/hero-lavender-branch.webp'),
         videoUrl: null,
         // posterUrl: '/images/icons-poster.svg',
-        posterUrl: '/images/hero/relax-recharge-elixir.webp',
+        posterUrl: publicAssetUrl('images/hero/relax-recharge-elixir.webp'),
         ctaLabel: 'Discover Collection',
         ctaUrl: '/?sort=popular#catalog',
         // productIds: ['p-104', 'p-105', 'p-106', 'p-121'],

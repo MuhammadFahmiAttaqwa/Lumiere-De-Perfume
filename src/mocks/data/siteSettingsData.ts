@@ -1,4 +1,5 @@
 import type { SiteSettings } from '@/features/site';
+import { publicAssetUrl } from '@/shared/lib/publicAssetUrl';
 
 export const SITE_SETTINGS_DATA: SiteSettings = {
     brandName: 'Lumière de Peau',
@@ -34,7 +35,7 @@ export const SITE_SETTINGS_DATA: SiteSettings = {
         contactPhone: '+62 994 2357 343',
         // imageUrl: '/images/footer-flower.svg',
         // imageUrl: '/images/design/footer-flower.png',
-        imageUrl: '/images/hero/hero-flower.webp',
+        imageUrl: publicAssetUrl('images/hero/hero-flower.webp'),
         marqueeText: 'Lumière de Peau',
     },
 };

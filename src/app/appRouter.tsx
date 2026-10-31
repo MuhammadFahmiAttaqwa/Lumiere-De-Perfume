@@ -1,5 +1,6 @@
 import { createBrowserRouter, type RouteObject } from 'react-router';
 import { HomePage } from '@/features/home';
+import { ENV } from '@/shared/config/env';
 import { ROUTES } from '@/shared/constants/routes';
 import { MainLayout } from './layout/MainLayout';
 import { NotFoundPage } from './pages/NotFoundPage';
@@ -29,5 +30,5 @@ export const appRoutes: RouteObject[] = [
 ];
 
 export function createAppRouter() {
-    return createBrowserRouter(appRoutes);
+    return createBrowserRouter(appRoutes, { basename: ENV.routerBasename });
 }

@@ -1,8 +1,9 @@
 import type { Gender } from '@/features/catalog';
 import type { MockProduct } from '../types/MockProduct';
+import { publicAssetUrl } from '@/shared/lib/publicAssetUrl';
 
 const CURRENCY = 'IDR';
-const IMAGE_BASE = '/images/products';
+const IMAGE_BASE = publicAssetUrl('images/products');
 // const DESIGN_IMAGE_BASE = '/images/design';
 
 // const DESIGN_PRODUCT_IMAGES: Record<string, string> = {
