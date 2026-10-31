@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-ink: #0e0b14;
+    --color-ink-soft: #1b1724;
+    --color-paper: #ffffff;
+    /* --color-mist: #f4f4f4; */
+    --color-mist: #f6f6f6;
+    --color-line: #e7e7e7;
+    --color-muted: #8a8a8a;
+    --color-lavender: #7c6a9a;
+
+    --font-display: 'Gloock', ui-serif, Georgia, serif;
+    --font-sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+
+    --radius-card: 0.5rem;
+
+    --animate-marquee: marquee 40s linear infinite;
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+@layer base {
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply bg-paper font-sans text-ink;
+    }
+}
